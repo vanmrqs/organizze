@@ -1,12 +1,14 @@
 import {
-    SafeAreaView,
-    StatusBar
+    ScrollView,
+    StatusBar,
+    View
 } from 'react-native'
 
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
 import Header from './src/components/Header'
+import Footer from "./src/components/Footer";
 
 export default function App() {
     const [fonteCarregada] = useFonts({
@@ -20,9 +22,12 @@ export default function App() {
     }
 
     return (
-        <SafeAreaView>
-            <Header />
-            <StatusBar barStyle="dark-content" />
-        </SafeAreaView>
+        <View style={{flex: 1}}>
+            <ScrollView>
+                <Header />
+                <StatusBar barStyle='light-content'/>
+            </ScrollView>
+            <Footer />
+        </View>
     );
 }

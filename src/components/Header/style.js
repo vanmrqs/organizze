@@ -8,9 +8,9 @@ const width = Dimensions.get('screen').width
 const style = {
     content : {
         backgroundColor: colors.bgDarkGrey,
-        height: 175,
+        height: 240,
         paddingLeft: 18,
-        paddingTop: 60,
+        paddingTop: 85,
         width: width
     },
 
