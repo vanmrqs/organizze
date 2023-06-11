@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+    SafeAreaView,
+    StatusBar
+} from 'react-native'
+
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
+
+import Header from './src/components/Header'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    const [fonteCarregada] = useFonts({
+        'circularBold'   : require('./src/common/fonts/CircularStd-Bold.ttf'),
+        'circular'       : require('./src/common/fonts/CircularStd-Book.ttf'),
+        'circularMedium' : require('./src/common/fonts/CircularStd-Medium.ttf')
+    })
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    if ( ! fonteCarregada ) {
+        return <AppLoading />
+    }
+
+    return (
+        <SafeAreaView>
+            <Header />
+            <StatusBar barStyle="dark-content" />
+        </SafeAreaView>
+    );
+}
