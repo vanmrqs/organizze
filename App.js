@@ -9,6 +9,8 @@ import AppLoading from 'expo-app-loading';
 
 import Header from './src/components/Header'
 import Footer from "./src/components/Footer";
+import Home from "./src/pages/Home";
+import colors from "./src/common/style/colors";
 
 export default function App() {
     const [fonteCarregada] = useFonts({
@@ -22,9 +24,9 @@ export default function App() {
     }
 
     return (
-        <View style={{flex: 1}}>
+        <View style={{flex: 1, backgroundColor: colors.bgLightGrey}}>
             <ScrollView>
-                <Header />
+                <Home />
                 <StatusBar barStyle='light-content'/>
             </ScrollView>
             <Footer />

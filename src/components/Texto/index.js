@@ -21,6 +21,7 @@ const estilos = StyleSheet.create({
     },
 
     textoNegrito : {
-        fontFamily : 'circularBold'
+        fontFamily : 'circularBold',
+        fontWeight: 'normal'
     }
 })
