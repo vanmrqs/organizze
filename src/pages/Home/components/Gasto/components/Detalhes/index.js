@@ -18,6 +18,6 @@ export default function Detalhes({ itens }) {
         {/*    return <Texto> {porcentagem} </Texto>*/}
         {/*}) }*/}
 
-        <FlatList data={itens} renderItem={GastoItem}/>
+        <FlatList data={itens} renderItem={GastoItem} scrollEnabled={false}/>
     </View>
 }

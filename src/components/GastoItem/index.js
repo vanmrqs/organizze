@@ -20,14 +20,14 @@ export default function GastoItem({ item: { categoria, valor, porcentagem, porce
         labelPorcentagemMesAnterior = '-'
     } else if ( porcentagemMesAnterior > 0 ) {
         stylePorcentagemMesAnterior = style.detalhesPorcentagemMesAnteriorNegativo
-        labelPorcentagemMesAnterior = `${porcentagemMesAnterior}%`
+        labelPorcentagemMesAnterior = `+${porcentagemMesAnterior}%`
     } else {
         stylePorcentagemMesAnterior = style.detalhesPorcentagemMesAnteriorPositivo
-        labelPorcentagemMesAnterior = `+${porcentagemMesAnterior}%`
+        labelPorcentagemMesAnterior = `${porcentagemMesAnterior}%`
     }
 
     return <View style={style.content}>
-        <CategoriaIcone nome={categoria.name} color={categoria.color} />
+        <CategoriaIcone nome={categoria.name} color={categoria.color} style={style.icon} />
 
         <View style={style.contentDetalhes}>
             <Texto style={style.categoriaNome}>
@@ -48,7 +48,7 @@ export default function GastoItem({ item: { categoria, valor, porcentagem, porce
                 </View>
 
                 <View>
-                    <Texto style={[style.detalhesPorcentagemMesAnterior, stylePorcentagemMesAnterior]}>
+                    <Texto style={stylePorcentagemMesAnterior}>
                         { labelPorcentagemMesAnterior }
                     </Texto>
 

@@ -1,6 +1,6 @@
 import colors from "../../common/style/colors";
 
-const style = {
+const styles = {
     content : {
         borderRadius: 100,
         height: 39,
@@ -15,4 +15,4 @@ const style = {
     }
 }
 
-export default style
+export default styles

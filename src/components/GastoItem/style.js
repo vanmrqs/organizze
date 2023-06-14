@@ -3,27 +3,31 @@ import colors from "../../common/style/colors";
 const style = {
     content : {
         flexDirection: 'row',
-        marginTop: 20
+        marginTop: 20,
+        width: '100%',
+    },
+
+    icon : {
+        marginTop: 10,
     },
 
     contentDetalhes : {
         marginLeft: 14,
         position: 'relative',
-        width: '100%',
-        backgroundColor: '#efbc00'
+        flexGrow: 1
     },
 
     categoriaNome : {
         color: colors.white,
+        fontWeight: 'bold',
         marginBottom: 3,
     },
 
     detalhes : {
         flexDirection: 'row',
+        flexGrow: 1,
         justifyContent: 'space-between',
-        marginTop: 10,
-        width: '50%',
-        backgroundColor: '#d1e'
+        marginTop: 10
     },
 
     detalhesValor : {
@@ -37,26 +41,30 @@ const style = {
         fontSize: 12
     },
 
-    detalhesPorcentagemMesAnterior : {
-        fontSize: 18,
+    detalhesPorcentagemMesAnteriorNeutro : {
+        color: colors.neutral,
+        fontSize: 12,
         fontWeight: 'bold',
         textAlign: 'right'
     },
 
-    detalhesPorcentagemMesAnteriorNeutro : {
-        color: colors.neutral
-    },
-
     detalhesPorcentagemMesAnteriorNegativo : {
-        color: colors.negative
+        color: colors.negative,
+        fontSize: 12,
+        fontWeight: 'bold',
+        textAlign: 'right'
     },
 
     detalhesPorcentagemMesAnteriorPositivo : {
-        color: colors.positive
+        color: colors.positive,
+        fontSize: 12,
+        fontWeight: 'bold',
+        textAlign: 'right'
     },
 
     detalhesTextoMesAnterior : {
         color: colors.lightGrey,
+        fontSize: 12,
         textAlign: 'right'
     }
 }

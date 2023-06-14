@@ -33,7 +33,7 @@ export default function Resumo({ titulo, subtitulo, valorDisponivel, valorTotal 
                 </Texto>
 
                 <Texto style={style.resumoDisponivelValorTotal}>
-                    / R$ { valorTotal }
+                    &nbsp; /&nbsp;&nbsp;R$ { valorTotal }
                 </Texto>
             </Texto>
         </View>
